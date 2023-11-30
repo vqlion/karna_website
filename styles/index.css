@@ -28,7 +28,7 @@ body {
 #large-header {
     display: flex;
     height: var(--header-height);
-    background-color: grey;
+    background-color: var(--orange);
     align-items: center;
     justify-content: space-around;
     padding: 1rem;
@@ -210,6 +210,9 @@ main {
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.content .padded {
     padding: 0 15rem;
 }
 
@@ -217,6 +220,9 @@ main h1 {
     font-family: 'Kaushan Script', handwriting;
     font-size: 6rem;
     margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(255,196,32,1);
+    letter-spacing: 5px;
 }
 
 main h2 {
@@ -225,16 +231,26 @@ main h2 {
     font-size: 3rem;
 }
 
+main h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
 main p {
     margin: 0;
+    font-size: 1.25rem;
+    letter-spacing: -0.25px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .double-flex {
     display: flex;
     gap: 10rem;
-    padding: 3rem 0;
+    padding: 1rem 15rem;
     justify-content: space-around;
-    align-items: center;
+    width: 100%;
+    /* align-items: center; */
 }
 
 .double-flex img {
@@ -243,18 +259,70 @@ main p {
 
 .double-flex .text-content {
     flex: 1;
-    background-color: lightgrey;
-    padding: 3rem;
+    /* background-color: rgba(255,196,32,1); */
+    padding: 3rem 0;
     border-radius: 20px;
 }
 
 .double-flex .text-content p {
     margin: 1rem 0 0 0;
-    font-size: 1.25rem;
 }
 
 .double-flex .img-content {
     flex: 1;
+    align-items: flex-end;
+}
+
+.main-description {
+    padding-top: 7rem;
+}
+
+.main-event {
+    padding: 0 3rem;
+    padding-bottom: 3rem;
+    margin: 0 10rem;
+    border-radius: 20px;
+    /* background-color: rgba(255,196,32,1); */
+}
+
+.main-event-images {
+    margin-bottom: 5rem;
+}
+
+.side-events-container {
+    padding: 3rem 20rem;
+}
+
+.side-events {
+    gap: 3rem;
+    padding: 0 0 1rem 0;
+    align-items: center;
+}
+
+.side-events .img-content {
+    flex: 0.33;
+}
+
+.side-events .text-content {
+    padding: 0;
+}
+
+p.centre {
+    text-align: center;
+}
+
+p.right {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-style: italic;
+    color: black;
 }
 
 /* --------FOOTER-------- */
@@ -263,6 +331,11 @@ footer {
     display: flex;
     justify-content: space-around;
     position: relative;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 400;
 }
 
 footer::before {
